@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<%- include('partials/profile-head.ejs') %>
+<head>
+    <title>Profile</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <section class="profileContainer">
+
+            <div>
+            <h1> hey <%= name %></h1>
+
+            <img class="profilePicture" src=<%= picture %>  alt="">
+        </div>
+            <div class="profileInfo">
+                <p><i><%= about %> </i></p>
+                <p>Age: <%= age %> </p>
+                <p>Looking for: <%= genderSpot %> that trains <%= sportPreference %> </p>
+
+
+                <p>Trains: <%= sports %> </p>
+                <!-- <p>Favourite food: Chicken</p> -->
+                
+
+            </div>
+            <section class="profileActions">
+            <a href="/edit-profile"><button class="spotButton">Edit Profile</button></a>
+            
+            <a href="/logout"><button class="button">Log Out</button></a>
+        </section>
+        </section>
+        
+    </div>
+
+    <script src="" async defer></script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+/* desktop resolution */
+
+body{
+    font-family: acumin-pro,sans-serif;
+    background-image: url("/public/img/background.jpg");
+    margin :0;
+    height: 100%;
+    width: 100%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    }
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.profileContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1em 1em 1em 1em;
+    padding: 1em;
+    background-color: grey;
+    
+}
+
+
+.profilePicture{
+    width: 15em;
+    height: auto;
+}
+
+.profileInfo{
+    margin-left: 1em;
+}
+
+.profileActions{
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em;
+    justify-content: space-between;
+}
+
+h1{
+    background-color: #4B4B4B;
+    padding-bottom: 1em;
+    padding-left: 0.5em;
+    margin: 0;
+    
+    font-weight: 700;
+    
+    color:white;
+}
+
+p{
+    
+}
+
+.button{
+    background-color: #E7EBEE;
+    border: none;
+    
+    padding: 1em 2em;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+
+    opacity: 0.5;
+    transition: 0.3s;
+
+    cursor: pointer;
+
+    
+    align-items: flex-end;
+}
+
+.spotButton{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 1em 2em;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+
+    opacity: 0.5;
+    transition: 0.3s;
+
+    cursor: pointer;
+
+    
+    align-items: flex-end;
+}
+
+.spotButton:hover{
+    opacity: 0.8;
+}
+
+.button:hover{
+opacity: 1;
+}
+
+input{
+    color: white;
+}

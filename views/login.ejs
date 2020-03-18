@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<%- include('partials/head.ejs') %>
+<head>
+    <title>Login</title>
+</head>
+
+<body>
+
+
+    <section class="container">
+        <h1>Login</h1>
+
+       
+
+        <div class="formStyle">
+            <form action="/login" method="POST">
+                <legend class="flexForm">
+
+                    <label class="flexForm">Username
+                    <input class="username" type="text" name="username" required>
+                </label>
+                    <label class="flexForm">Password
+                    <input class="password" type="password" name="password" required>
+                </label>
+                    <button class="button" type="submit"> Login</button>
+
+                </legend>
+            </form>
+
+            <p>New here?</p>
+            <a href="/register"><button class="button">Register</button></a>
+        </div>
+    </section>
+    <script src="" async defer></script>
+
+</body>
+
+</html>
