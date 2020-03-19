@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const dotenv = require('dotenv').config()
 const session = require('express-session')
 const passport = require('./config/passport')
+const userRouter = require('./routes/users')
 var app = express()
 
 //SANITY CHECK-------------------------------------
@@ -12,11 +13,8 @@ console.log(__dirname)
 app.use(bodyParser.urlencoded({
   extended: true
 }))
-app.use(express.json())
-
-//express session----------------------------------
-app.use(session({
-
+.use(express.json())
+.use(session({
   secret: process.env.SECRET,
   resave: false,
   saveUninitialized: false,
@@ -24,15 +22,11 @@ app.use(session({
     maxAge: 500000
   }
 }))
-
-app.use(passport.initialize())
-app.use(passport.session())
-
-app.set('view engine', 'ejs')
-
-
-//static file folder-------------------------------
-app.use('/public', express.static('public'))
+.use(passport.initialize())
+.use(passport.session())
+.set('view engine', 'ejs')
+.use('/public', express.static('public'))
+.use('/', userRouter)
 
 //setup database-----------------------------------
 mongoose.connect(process.env.MONGODB_URI, {
@@ -51,12 +45,6 @@ db.on('error', console.error.bind(console, 'connection error:'))
 db.once('open', function () {
   console.log("DATABASE CONNECTED FOR SURE")
 })
-
-
-//routes------------------------------------------
-const userRouter = require('./routes/users')
-
-app.use('/', userRouter)
 
 
 //listen-----------------------------------------

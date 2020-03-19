@@ -1,93 +1,102 @@
 <!DOCTYPE html>
 <%- include('partials/head.ejs') %>
+
 <head>
-    <title>Register</title>
+  <title>Register</title>
 </head>
 
 <body>
 
+  <section class="container">
 
-    <section class="container">
-        
+    <div class="formStyle">
 
-        <div class="formStyle">
-            <form action="/edit-profile" method="POST" enctype="multipart/form-data">
-                <legend class="flexForm">
-                    <h2>Edit Profile</h2>
+      <form action="/edit-profile" method="POST" enctype="multipart/form-data">
 
-                    <label class="flexForm">What is your name?
-                    <input class="username" type="text" name="name"  required>
-                </label>
-               
+        <fieldset class="flexForm">
 
-                    <label >What is your gender?</label>
-                    <div>
-                        <label>man
-                        <input type="radio" name="gender" value="male" required >
-                    </label>
-                    <label> woman
-                        <input type="radio" name="gender" value="female" required >
-                    </label>
-                    </div>
+          <h2>Edit Profile</h2>
+          <!-- Legend and fieldset here also hidden for accessibility -->
+          <legend>Edit your profile here</legend>
 
-                    <label class="flexForm">What is your one-liner?
-                    <input class="password" type="text" name="about" required>
-                </label>
-                    <label class="flexForm">What is your age?
-                    <input class="password" type="text" name="age" required>
-                </label>
-                    <label>What do you train?</label>
-                    <div>
-                        <label  for="bodybuilding">
-                        <input type="radio" name="sports" value="bodybuilding" required>
-                         Bodybuilding</label>
-                         <label for="crossfit">
-                        <input type="radio" name="sports" value="crossfit" required>
-                         Crossfit</label>
-                         <label for="powerlifting">
-                        <input type="radio" name="sports" value="powerlifting" required>
-                         Powerlifting</label>
-                         <label for="cardio">
-                        <input type="radio" name="sports" value="cardio" required>
-                         Cardio</label>
-                    </div>
+          <label class="flexForm">What is your name?
+            <input class="username" type="text" name="name" required>
+          </label>
 
-                    <label>Which gender would you like to spot?</label>
-                    <div>
-                    <input type="checkbox" name="genderSpot" value="man" >
-                    <label for="man"> man</label>
-                    <input type="checkbox" name="genderSpot" value="woman" >
-                    <label for="woman"> woman</label>
-                </div>
+          <label>What is your gender?</label>
+          <div>
+            <label>man
+              <input type="radio" name="gender" value="male" required>
+            </label>
+            <label> woman
+              <input type="radio" name="gender" value="female" required>
+            </label>
+          </div>
 
-                    <label>With what kind of person would you like to flex with?</label>
-                    <div>
-                        <label for="bodybuilding"> 
-                        <input type="radio" name="sportPreference" value="bodybuilding" required>
-                        Bodybuilding</label>
-                        <label for="crossfit"> 
-                        <input type="radio" name="sportPreference" value="crossfit" required>
-                        Crossfit</label>
-                        <label for="powerlifting"> 
-                        <input type="radio" name="sportPreference" value="powerlifting" required>
-                        Powerlifting</label>
-                        <label for="cardio">
-                        <input type="radio" name="sportPreference" value="cardio" required>
-                         Cardio</label>
-                    </div>
+          <label class="flexForm">What is your one-liner?
+            <input class="password" type="text" name="about" required>
+          </label>
 
-                    <input name="picture" type="file" multiple>
+          <label class="flexForm">What is your age?
+            <input class="password" type="text" name="age" required>
+          </label>
 
-                    <button class="button" type="submit"> Save</button>
+          <label>What do you train?</label>
+          <div>
+            <label for="bodybuilding">
+              <input type="radio" name="sports" value="bodybuilding" required>
+              Bodybuilding</label>
+            <label for="crossfit">
+              <input type="radio" name="sports" value="crossfit" required>
+              Crossfit</label>
+            <label for="powerlifting">
+              <input type="radio" name="sports" value="powerlifting" required>
+              Powerlifting</label>
+            <label for="cardio">
+              <input type="radio" name="sports" value="cardio" required>
+              Cardio</label>
+          </div>
 
-                </legend>
-            </form>
+          <label>Which gender would you like to spot?</label>
+          <div>
+            <label>
+            <input type="radio" name="genderSpot" value="man">
+             man</label>
+            <label>
+            <input type="radio" name="genderSpot" value="woman">
+            woman</label>
+          </div>
+
+          <label>With what kind of person would you like to flex with?</label>
+          <div>
+            <label>
+              <input type="radio" name="sportPreference" value="bodybuilding" required>
+              Bodybuilding</label>
+            <label>
+              <input type="radio" name="sportPreference" value="crossfit" required>
+              Crossfit</label>
+            <label>
+              <input type="radio" name="sportPreference" value="powerlifting" required>
+              Powerlifting</label>
+            <label>
+              <input type="radio" name="sportPreference" value="cardio" required>
+              Cardio</label>
+          </div>
+
+          <label class="uploadPicture"> Upload a profile picture
+            <input name="picture" type="file" multiple>
+          </label>
+
+          <button class="button" type="submit"> Save</button>
+
+        </fieldset>
+      </form>
 
 
-            <a href="/profile"><button class="button">Cancel</button></a>
-        </div>
-    </section>
-    <script src="" async defer></script>
+      <a href="/profile"><button class="button">Cancel</button></a>
+    </div>
+  </section>
+  <script src="" async defer></script>
 
 </body>
 

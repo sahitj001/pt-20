@@ -10,10 +10,12 @@ router.get('/', navigationHelper.goToHome)
 
 router.get('/login', navigationHelper.goToLogin)
 //if authentication passes, redirect to profile with profileAuth.succesRedirect
-router.post('/login', passport.authenticate('local', {failureRedirect: '/login'}) , profileAuth.succesRedirect)
+router.post('/login', passport.authenticate('local', {
+  failureRedirect: '/login'
+}), profileAuth.succesRedirect)
 
 router.get('/register', navigationHelper.goToRegister)
-router.post('/register', profile.register )
+router.post('/register', profile.register)
 
 router.get('/profile', profileAuth.profileCheck)
 

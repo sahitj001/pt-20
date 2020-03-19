@@ -50,6 +50,9 @@ Used [Passport](https://www.npmjs.com/package/passport) together with [Passport-
 ### Uploading files
 [Multer](https://www.npmjs.com/package/multer) to upload files.
 
+## See the site live
+[Link to my live deployment](https://nameless-earth-63686.herokuapp.com/)
+
 ## Authors
 
 - Jordy 

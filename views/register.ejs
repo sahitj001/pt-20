@@ -1,35 +1,49 @@
 <!DOCTYPE html>
 <%- include('partials/head.ejs') %>
+
 <head>
-    <title>Register</title>
+  <title>Register</title>
 </head>
 
 <body>
 
 
-    <section class="container">
-        <h1>Register</h1>
+  <section class="container">
 
-        <div class="formStyle">
-            <form action="/register" method="POST">
-                <legend class="flexForm">
-
-                    <label class="flexForm">Username
-                    <input class="username" type="text" name="username" required minlength="3">
-                </label>
-                    <label class="flexForm">Password
-                    <input class="password" type="password" name="password" required minlength="8">
-                </label>
-                    <button class="button" type="submit"> Register</button>
-
-                </legend>
-            </form>
-
-            <p>Already have an account?</p>
-            <a href="/login"><button class="button">Log in</button></a>
-        </div>
+    <section class="headerContainer">
+      <img class="logo" src="../public/img/logo.svg" alt="logo">
+      <h1>Register</h1>
     </section>
-    <script src="" async defer></script>
+
+    <div class="formStyle">
+
+      <form action="/register" method="POST">
+
+        <fieldset class="flexForm">
+
+          <!-- this legend and fieldset are not visible. I have done this for accessibility for screenreaders. -->
+          <legend> Register an account </legend>
+
+          <label class="flexForm">Username
+            <input class="username" type="text" name="username" required minlength="3">
+          </label>
+
+          <label class="flexForm">Password
+            <input class="password" type="password" name="password" required minlength="8">
+          </label>
+
+          <button class="button" type="submit"> Register</button>
+
+        </fieldset>
+
+      </form>
+
+      <p>Already have an account?</p>
+      <a href="/login"><button class="button">Log in</button></a>
+
+    </div>
+  </section>
+  <script src="" async defer></script>
 
 </body>
 
